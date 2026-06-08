@@ -59,8 +59,17 @@ class ConfigService {
       const data = await fs.readFile(CONFIG_FILE, 'utf-8');
       this.config = JSON.parse(data);
     } catch {
-      // Use default config
-      await this.save();
+      // config.json 不存在，尝试从 example 复制
+      const exampleFile = CONFIG_FILE + '.example';
+      try {
+        await fs.copyFile(exampleFile, CONFIG_FILE);
+        console.log('[Config] 已从 config.json.example 创建 config.json，请填入 API Key');
+        const data = await fs.readFile(CONFIG_FILE, 'utf-8');
+        this.config = JSON.parse(data);
+      } catch {
+        // example 也没有，用内存默认值写一份
+        await this.save();
+      }
     }
   }
 

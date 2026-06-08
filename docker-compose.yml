@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  ai-bid:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ai-bid-system
+    ports:
+      - "8000:8000"
+    volumes:
+      # 持久化数据目录
+      - bid-data:/app/data
+      # 挂载配置文件（包含 API Key，不要提交到 git）
+      - ./server-node/config.json:/app/server-node/config.json
+    environment:
+      - NODE_ENV=production
+      - PORT=8000
+      # AI API 配置（从 .env 文件或环境变量读取）
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_BASE_URL=${OPENAI_BASE_URL}
+      - OPENAI_MODEL=${OPENAI_MODEL}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+
+volumes:
+  bid-data:
+    driver: local
