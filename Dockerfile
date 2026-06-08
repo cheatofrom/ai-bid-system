@@ -33,7 +33,6 @@ RUN cd server-node && npm ci --only=production
 # 复制后端源码
 COPY server-node/src/ ./server-node/src/
 COPY server-node/tsconfig.json ./server-node/
-COPY server-node/config.json.example ./server-node/
 
 # 复制构建好的前端文件
 COPY --from=frontend-builder /app/dist ./public
