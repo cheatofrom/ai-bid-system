@@ -11,6 +11,27 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m'
 
+# 检查 .env 文件
+if [ ! -f ".env" ]; then
+    echo -e "${YELLOW}警告: 未找到 .env 文件${NC}"
+    echo "请复制 .env.example 为 .env 并填入 API Key："
+    echo ""
+    echo "  cp .env.example .env"
+    echo "  vi .env"
+    echo ""
+    exit 1
+fi
+
+# 加载环境变量
+source .env
+
+# 检查 API Key
+if [ -z "$OPENAI_API_KEY" ]; then
+    echo -e "${YELLOW}错误: OPENAI_API_KEY 未设置${NC}"
+    echo "请在 .env 文件中填入 API Key"
+    exit 1
+fi
+
 # 检查 Node.js
 if ! command -v node &> /dev/null; then
     echo "错误: 未找到 Node.js，请先安装"
@@ -33,6 +54,12 @@ fi
 
 # 创建数据目录
 mkdir -p server-node/.data/sessions server-node/.data/superdoc-home server-node/.data/pdf-library
+
+# 导出环境变量供后端使用
+export OPENAI_API_KEY
+export OPENAI_BASE_URL
+export OPENAI_MODEL
+export MODEL_NAME
 
 # 启动 Node.js 后端（后台）
 echo -e "${GREEN}启动 Node.js 后端 (端口 8000)...${NC}"

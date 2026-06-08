@@ -10,31 +10,31 @@ export interface Config {
   models: Record<string, ModelConfig>;
 }
 
-// 从环境变量读取配置
-function getConfigFromEnv(): Config {
-  const apiKey = process.env.OPENAI_API_KEY || '';
-  const baseURL = process.env.OPENAI_BASE_URL || 'https://api.openai.com/v1';
-  const model = process.env.OPENAI_MODEL || 'gpt-4o';
-
-  return {
-    default_model: 'env-model',
-    models: {
-      'env-model': {
-        name: process.env.MODEL_NAME || 'AI Model',
-        api_key: apiKey,
-        base_url: baseURL,
-        model_name: model,
-      },
-    },
-  };
-}
-
-const DEFAULT_CONFIG: Config = getConfigFromEnv();
-
 class ConfigService {
-  private config: Config = DEFAULT_CONFIG;
+  private config: Config | null = null;
+
+  private loadFromEnv(): Config {
+    const apiKey = process.env.OPENAI_API_KEY || '';
+    const baseURL = process.env.OPENAI_BASE_URL || 'https://api.openai.com/v1';
+    const model = process.env.OPENAI_MODEL || 'gpt-4o';
+
+    return {
+      default_model: 'env-model',
+      models: {
+        'env-model': {
+          name: process.env.MODEL_NAME || 'AI Model',
+          api_key: apiKey,
+          base_url: baseURL,
+          model_name: model,
+        },
+      },
+    };
+  }
 
   getConfig(): Config {
+    if (!this.config) {
+      this.config = this.loadFromEnv();
+    }
     return this.config;
   }
 
@@ -43,8 +43,9 @@ class ConfigService {
   }
 
   getModelConfig(modelKey?: string): { apiKey: string; baseURL: string; model: string } {
-    const key = modelKey || this.config.default_model;
-    const model = this.config.models[key];
+    const config = this.getConfig();
+    const key = modelKey || config.default_model;
+    const model = config.models[key];
     if (!model) {
       throw new Error(`未知模型: ${key}`);
     }
