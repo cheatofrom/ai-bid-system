@@ -5,3 +5,4 @@ output/
 *.local
 .claude/
 *.log
+server-node/.data/
