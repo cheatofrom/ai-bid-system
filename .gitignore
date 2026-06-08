@@ -1,0 +1,7 @@
+node_modules/
+dist/
+output/
+.env
+*.local
+.claude/
+*.log

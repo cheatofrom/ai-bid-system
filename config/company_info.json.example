@@ -1,0 +1,59 @@
+{
+  "basic": {
+    "company_name_full": "XXX科技有限公司",
+    "company_name_short": "XXX科技",
+    "credit_code": "91XXXXXXXXXXXXXXXX",
+    "legal_person": "张三",
+    "registered_address": "XX省XX市XX区XX路XX号",
+    "contact_person": "李四",
+    "phone": "010-XXXXXXXX",
+    "fax": "010-XXXXXXXX",
+    "email": "contact@example.com",
+    "bank_name": "XX银行XX支行",
+    "bank_account": "XXXXXXXXXXXXXXXX"
+  },
+  "certificates": [
+    {
+      "name": "营业执照",
+      "number": "91XXXXXXXXXXXXXXXX",
+      "issue_date": "2024-01-01",
+      "expire_date": "2029-12-31",
+      "file": "certificates/business_license.pdf"
+    },
+    {
+      "name": "ISO9001质量管理体系认证",
+      "number": "XXXXX",
+      "issue_date": "2023-06-01",
+      "expire_date": "2026-06-01",
+      "file": "certificates/iso9001.pdf"
+    }
+  ],
+  "performance": [
+    {
+      "project_name": "XX项目",
+      "client": "XX公司",
+      "amount": 5000000,
+      "date": "2024-03-15",
+      "content": "XX设备供货及安装"
+    }
+  ],
+  "products": [
+    {
+      "name": "产品A",
+      "model": "Model-A100",
+      "parameters": {
+        "功率": "500W",
+        "材质": "304不锈钢",
+        "尺寸": "1200×800×600mm"
+      }
+    }
+  ],
+  "personnel": [
+    {
+      "name": "王五",
+      "role": "项目经理",
+      "qualification": "PMP、一级建造师",
+      "cert_number": "XXXXXXXX"
+    }
+  ]
+}

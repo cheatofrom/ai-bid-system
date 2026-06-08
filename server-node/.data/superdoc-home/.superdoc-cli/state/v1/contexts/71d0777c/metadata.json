@@ -1,0 +1,22 @@
+{
+  "contextId": "71d0777c",
+  "projectRoot": "/home/dell/mnt/ai-learning/ai_bid/server-node",
+  "source": "path",
+  "sourcePath": "/home/dell/mnt/ai-learning/ai_bid/server-node/.data/sessions/71d0777c/current.docx",
+  "workingDocPath": "/home/dell/mnt/ai-learning/ai_bid/server-node/.data/superdoc-home/.superdoc-cli/state/v1/contexts/71d0777c/working.docx",
+  "dirty": false,
+  "revision": 0,
+  "sessionType": "local",
+  "user": {
+    "name": "投标助手",
+    "email": "assistant@bid.local"
+  },
+  "openedAt": "2026-06-06T07:02:20.696Z",
+  "updatedAt": "2026-06-06T07:06:48.127Z",
+  "sourceSnapshot": {
+    "mtimeMs": 1780729608108.916,
+    "size": 3788787,
+    "checksum": "f089e511cebaeb4e2b0cc2699567ec00c2eaa4a31ee777034deda5903fec5f1c"
+  },
+  "lastSavedAt": "2026-06-06T07:06:48.127Z"
+}

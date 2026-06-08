@@ -1,0 +1,36 @@
+{
+  "name": "ai_bid",
+  "version": "1.0.0",
+  "description": "> 上传招标文件（PDF），自动生成符合格式要求的完整投标文件（DOCX）",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "bid",
+    "docx",
+    "superdoc"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hocuspocus/provider": "^4.1.0",
+    "@superdoc-dev/react": "^1.9.0",
+    "@superdoc-dev/sdk": "^1.14.0",
+    "@types/node": "^25.9.1",
+    "@types/react": "^19.2.16",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.2",
+    "antd": "^6.4.3",
+    "openai": "^6.41.0",
+    "pdfjs-dist": "^4.8.69",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "superdoc": "^1.38.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.16",
+    "yjs": "^13.6.31"
+  }
+}

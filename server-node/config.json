@@ -1,0 +1,35 @@
+{
+  "default_model": "custom_1780626879696",
+  "models": {
+    "deepseek-chat": {
+      "name": "DeepSeek",
+      "api_key": "sk-6713416876724af5903fcabd0d5321a2",
+      "base_url": "https://api.deepseek.com/v1",
+      "model_name": "deepseek-chat"
+    },
+    "kimi": {
+      "name": "Kimi (月之暗面)",
+      "api_key": "sk-JXGvHTmgnvDPhaUbYT4vMTW7IGor9fBHLbkF3L2fyUSuTiOA",
+      "base_url": "https://api.moonshot.cn/v1",
+      "model_name": "kimi-k2.6"
+    },
+    "qwen-max": {
+      "name": "通义千问",
+      "api_key": "",
+      "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+      "model_name": "qwen-max"
+    },
+    "glm-4": {
+      "name": "智谱GLM",
+      "api_key": "",
+      "base_url": "https://open.bigmodel.cn/api/paas/v4",
+      "model_name": "glm-4"
+    },
+    "custom_1780626879696": {
+      "name": "MiMo v2.5 Pro",
+      "api_key": "tp-c9j0eh0ixfpqkdtlh2jhlqj8olbhxi2y41f344w33yy2t9d9",
+      "base_url": "https://token-plan-cn.xiaomimimo.com/v1",
+      "model_name": "mimo-v2.5-pro"
+    }
+  }
+}

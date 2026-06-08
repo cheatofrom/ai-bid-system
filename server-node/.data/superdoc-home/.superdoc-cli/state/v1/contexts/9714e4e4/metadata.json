@@ -1,0 +1,18 @@
+{
+  "contextId": "9714e4e4",
+  "projectRoot": "/home/dell/mnt/ai-learning/ai_bid/server-node",
+  "source": "path",
+  "sourcePath": "/home/dell/mnt/ai-learning/ai_bid/server-node/.data/sessions/9714e4e4/current.docx",
+  "workingDocPath": "/home/dell/mnt/ai-learning/ai_bid/server-node/.data/superdoc-home/.superdoc-cli/state/v1/contexts/9714e4e4/working.docx",
+  "dirty": false,
+  "revision": 1,
+  "sessionType": "local",
+  "openedAt": "2026-06-05T08:56:15.033Z",
+  "updatedAt": "2026-06-05T08:57:08.840Z",
+  "sourceSnapshot": {
+    "mtimeMs": 1780649828838.651,
+    "size": 52005,
+    "checksum": "2d3d502bcba174a041a4f7888344cc91e3f2ff62b52d8b0bd40de527ce5d9933"
+  },
+  "lastSavedAt": "2026-06-05T08:57:08.840Z"
+}

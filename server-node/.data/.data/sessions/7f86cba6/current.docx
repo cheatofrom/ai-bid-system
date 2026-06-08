@@ -1,0 +1,13 @@
+{
+  "name": "superdoc-bridge",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@superdoc-dev/sdk": "^1.0.0",
+    "express": "^4.18.0"
+  }
+}

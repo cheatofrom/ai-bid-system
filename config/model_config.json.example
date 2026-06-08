@@ -1,0 +1,38 @@
+{
+  "default_model": "qwen-max",
+  "models": {
+    "qwen-max": {
+      "provider": "dashscope",
+      "api_key": "sk-xxxxxxxxxxxxxxxx",
+      "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+      "model_name": "qwen-max",
+      "max_tokens": 8192,
+      "temperature": 0.3
+    },
+    "deepseek-chat": {
+      "provider": "deepseek",
+      "api_key": "sk-xxxxxxxxxxxxxxxx",
+      "base_url": "https://api.deepseek.com/v1",
+      "model_name": "deepseek-chat",
+      "max_tokens": 8192,
+      "temperature": 0.3
+    },
+    "glm-4": {
+      "provider": "zhipu",
+      "api_key": "xxxxxxxxxxxxxxxx",
+      "base_url": "https://open.bigmodel.cn/api/paas/v4",
+      "model_name": "glm-4",
+      "max_tokens": 8192,
+      "temperature": 0.3
+    }
+  },
+  "pdf_parser": {
+    "engine": "pdfplumber",
+    "ocr_enabled": false,
+    "ocr_engine": "paddleocr"
+  },
+  "output": {
+    "default_output_dir": "output/",
+    "auto_open": false
+  }
+}
